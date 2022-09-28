@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "RobotoCondensedBoldItalic";
+    src: url(/fonts/Roboto_Condensed/RobotoCondensed-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensedBold";
+    src: url(/fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensedRegular";
+    src: url(/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensedItalic";
+    src: url(/fonts/Roboto_Condensed/RobotoCondensed-Italic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensedLight";
+    src: url(/fonts/Roboto_Condensed/RobotoCondensed-Light.ttf);
+}
+
+h1, h2{
+    padding-top: 20px;
+    color: #e3792d;
+    font-family: "RobotoCondensedBoldItalic";
+}
+
+h2:active{
+    color: #732d0f;
+}
+
+h1{
+    padding-top: 40px;
+    text-align: center;
+    font-family: "RobotoCondensedBold";
+
+}
+
+a{
+    color: darkblue;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #e3104f;
+}
+
+a:hover{
+    color: #3d3de0;
+}
+
+body{
+    background-color: beige;
+    width: 90%;
+    margin: 0 auto;
+    font-family: "RobotoCondensedRegular";
+}
+
+header{
+    width: 90%;
+}
+
+section{
+    width: 70%;
+}
+
+aside{
+    align-content: center;
+    border: 4px dotted #825021;
+    background-color: #b8814d;
+    border-radius: 30px;
+    margin-top: 40px;
+    padding: 20px 0px;
+    width: 29%;
+    height: auto;
+    float: right;
+}
+
+#limeBorder{
+    padding: 4px;
+    border: 1px solid  #b1fc65;
+    background-color: #d0f7a8;
+    border-radius: 3px;
+    font-family: 'RobotoCondensedItalic';
+}
+
+#limeBorder:hover{
+    border: 1px solid  #93d64f;
+    background-color: #acd683;
+}
+
+#redBorder{
+    padding: 4px;
+    border: 1px solid  #e32b2b;
+    background-color: #eb7878;
+    border-radius: 3px;
+    font-family: 'RobotoCondensedLight';
+}
+
+#redBorder:hover{
+    border: 1px solid  #b02525;
+    background-color: #d46666;
+}
+
+#contacts{
+    text-align: center;
+}
+
+footer{
+    padding-bottom: 80px;
+}
+
+img{
+    width: 80%;
+    margin: 3% 9%;
+}
+
+ol{
+    list-style-type: none;
+    counter-reset: num;
+    margin: 0px 0px 0px 40px;
+    padding: 15px 0px 5px 0px;
+    font-size: 16px;
+}
+
+ol li{
+    position: relative;
+    padding: 3px;
+}
+
+ol li::before{
+    text-align: center;
+    content: counter(num) '.';
+    width: 20px;
+    height: 20px;
+    counter-increment: num;
+    color: #3ebd42;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #e5dd93;
+    left: -20px;
+}
+
+ul{
+    list-style-type: square;
+}
+
+ul li{
+    font-family: 'RobotoCondensedItalic';
+    padding: 5px;
+}
