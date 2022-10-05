@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VForme</title>
+</head>
+
+<body>
+    <header>
+        <h1>VForme</h1>
+        <img src="img/logo.png" alt="">
+    </header>
+    <main>
+        <form action="" method="post">
+            <p><label class="long" for="some_text">Какой-то текст</label><input type="text" name="some_text"
+                    id="some_text" autocomplete="off" autofocus></p>
+            <p><label class="long" for="phone_number">Телефон</label><input type="tel" name="phone_number"
+                    id="phone_number" autocomplete="on" placeholder="+7 999 999 99 99" required></p>
+            <p><label class="long" for="email">Адрес электронной почты</label><input type="email" name="email"
+                    id="email" autocomplete="on" placeholder="name@mail.ru" required></p>
+            <p><label class="long" for="password">Пароль</label><input type="password" name="password" id="password"
+                    autocomplete="on" required></p>
+            <p><label for="sile">Файл</label><input type="file" name="file" id="file"></p>
+            <p><label><input class="point" type="checkbox" name="car">Машина</label></p>
+            <p><label><input class="point" type="checkbox" name="house">Дом</label></p>
+            <p><label><input class="point" type="checkbox" name="pet">Домашние животные</label></p>
+            <fieldset>
+                <legend>Сколько будет: 2 + 2 <sub>*</sub> 2?</legend>
+                <p><label><input class="point" type="radio" name="answer" id="" value="false" checked>7</label></p>
+                <p><label><input class="point" type="radio" name="answer" id="" value="true">6</label></p>
+                <p><label><input class="point" type="radio" name="answer" id="" value="false">8</label></p>
+            </fieldset>
+            <p><label for="date">Выберите дату</label><input type="datetime-local" name="date" id="date"></p>
+            <p><label for="about">Расскажите о себе</label></p>
+            <p><textarea name="about" id="about" rows="7" cols=50" maxlength="300" minlength="20" placeholder=""
+                    autocomplete="off"></textarea></p>
+            <p><label for="option">Ваш любимый цвет</label>
+                <select name="option" id="option">
+                    <option value="red">красный</option>
+                    <option value="blue">Синий</option>
+                    <option value="green">Зеленый</option>
+                    <option value="white" selected>Белый</option>
+                    <option value="black">Черный</option>
+                </select>
+            </p>
+            <button name="reset" type="reset" id="reset">Reset</button>
+            <button name="submit" type="submit" id="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <video controls preload="auto" loop muted playsinline poster>
+            <source src="video/Dr Livesey walking on B site.mp4">
+        </video>
+        <address>
+            <ul>
+                <li><a href="tel:01234567890">Позвонить</a></li>
+                <li><a href="mailto:test@mail.tu">Написать</a></li>
+            </ul>
+        </address>
+    </footer>
+</body>
+
+</html>
