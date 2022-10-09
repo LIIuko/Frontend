@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Oswald";
+    src: url("/5\ практическая/fonts/Oswald-VariableFont_wght.ttf");
+}
+
+*{
+    font-size: 16px;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    font-family: "Oswald";
+    background-image: url("/5\ практическая/img/background_nav.jpg");
+    width: 100%;
+    height: 740px;
+}
+
+h1{
+    letter-spacing: 0.02em;
+    line-height: 95px;
+    font-weight: 500;
+    font-size: 4rem;
+    padding: 0;
+    margin: 0 0 35px 0;
+}
+
+nav {
+    padding: 0 20%;
+}
+
+.nav__header{
+    color: white;
+    display: flex;
+}
+
+.nav__logo{
+    flex: 1 1 auto;
+    width: 60px;
+    height: 60px;
+    padding: 20px 0 0 0;
+}
+
+.nav__menu{
+    font-size: 1.125rem;
+    border-radius: 10px;
+    height: 50px;
+    margin: 30px 0 0 0 ;
+    background-color: #F7654A;
+}
+
+.nav__menu ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav__menu ul a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu__link a:hover{
+    color: rgb(207, 207, 207);
+}
+
+.menu__link {
+    margin: 10px 20px;
+    list-style: none;
+    text-align: center;
+}
+
+
+.nav__title {
+    line-height: normal;
+    padding: 112px 0 0 0;
+    margin: 0 auto;
+    width: 740px;
+    color: white;
+    text-align: center;
+}
+.nav__subtitle {
+    padding: 0 0 170px 0;
+    font-size: 1.125rem;
+}
+
+.years{
+    margin: 0 auto;
+    width: 1100px;
+    height: 300px;
+    background-color: beige;
+}
+.years__row {
+    background-color: aqua;
+    display: flex;
+    margin: auto;
+    height: 62%;
+}
+.years__page {
+    background-color: blue;
+    margin: auto auto;
+    height: 186px;
+    flex: 0 1 17%;
+    text-align: center;
+}
+.years__page-title {
+    height: 86px;
+    padding: 0;
+    margin: 0 0 25px 0;
+    line-height: 6.7rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.5rem;
+    color: #F7654A;
+}
+.years__page-bold {
+    height: 43px;
+    padding: 0;
+    margin: 0 0 10px 0;
+    font-size: 2.25rem;
+    color: black;
+    font-weight: 500;
+}
+.years__page-text {
+    height: 22px;
+    font-size: 1.125rem;
+    color: #999999;
+    padding: 0;
+    margin: 0;
+}
+.project {
+}
+.projects__item {
+}
+.projects__item-title {
+}
+.projects__item-text {
+}
