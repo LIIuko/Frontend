@@ -4,87 +4,122 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.webp" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="nav__header">
-                <div class="nav__logo">
-                    <img src="img/logo.svg" alt="">
+        <div class="content">
+            <h1 class="title">Практическая работа 5</h1>
+            <div class="header__nav">
+                <div class="header__logo">
+                    <img class="logo" src="img/logo.webp" alt="">
                 </div>
-                <div class="nav__menu">
-                    <ul>
-                        <li class="menu__link"><a href="">проекты</a></li>
-                        <li class="menu__link"><a href="">занятость</a></li>
-                        <li class="menu__link"><a href="">вопросы</a></li>
-                        <li class="menu__link"><a href="">партнеры</a></li>
-                        <li class="menu__link"><a href="">отзывы</a></li>
-                        <li class="menu__link"><a href="">контакты</a></li>
-                    </ul>
-                </div>
+                <input id="menu-toggle" type="checkbox" />
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
+                <ul class="menu__list menu__header">
+                    <li class="menu__item"><a class="menu__item-color" href="#A">Флекс</a></li>
+                    <li class="menu__item"><a class="menu__item-color" href="#B">Галерея</a></li>
+                    <li class="menu__item"><a class="menu__item-color" href="#contacts">Контакты</a></li>
+                </ul>
             </div>
-            <div class="nav__title">
-                <h1>РЕАЛИЗУЕМ КРУПНЕЙШИЕ
-                    ПРОЕКТЫ В РОССИИ</h1>
-                <p class="nav__subtitle">стадионы, газопроводы, мосты, дамбы</p>
-            </div>
-        </nav>
+        </div>
     </header>
     <main>
-        <section>
-            <div class="years">
-                <div class="years__row">
-                    <div class="years__page">
-                        <div class="years__page-title">26</div>
-                        <div class="years__page-bold">ЛЕТ</div>
-                        <div class="years__page-text">на рынке</div>
-                    </div>
-                    <div class="years__page">
-                        <p class="years__page-title">26</p>
-                        <p class="years__page-bold">ЛЕТ</p>
-                        <p class="years__page-text">на рынке</p>
-                    </div>
-                    <div class="years__page">
-                        <p class="years__page-title">26</p>
-                        <p class="years__page-bold">ЛЕТ</p>
-                        <p class="years__page-text">на рынке</p>
-                    </div>
-                    <div class="years__page">
-                        <div class="years__page-title">26</div>
-                        <div class="years__page-bold">ЛЕТ</div>
-                        <div class="years__page-text">на рынке</div>
-                    </div>
+        <div class="content">
+            <h2 class="title title-h2">Флекс контент</h2>
+            <div class="content__flex">
+                <div id="A" class="content__item content__item-100">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Voluptatem placeat sint, voluptates reiciendis eos veniam inventore iusto totam, dolorem odio,
+                    facere in ad numquam dolores quibusdam nemo velit optio pariatur!</div>
+                <div id="B" class="content__item content__item-75">Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit. Possimus, a accusamus. Aliquid tempora molestias architecto sint debitis commodi omnis?
+                    Quibusdam at necessitatibus blanditiis. Similique consequatur qui quaerat corporis! Maiores, fugiat?
                 </div>
+                <div id="C" class="content__item content__item-25">Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Suscipit mollitia eligendi magnam odit, quas iure id perferendis natus nam laboriosam
+                    consequatur nulla earum ex voluptatum sunt debitis! Cum, possimus voluptatibus.</div>
+                <div id="D" class="content__item content__item-25">Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Aspernatur ratione eos repellendus vel possimus veniam ea totam, labore atque non soluta sit
+                    commodi nisi numquam optio eaque temporibus saepe. Obcaecati.</div>
+                <div id="E" class="content__item content__item-75">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Rem, expedita sapiente! Ducimus assumenda reprehenderit nesciunt enim eligendi quis quas, at
+                    repellendus, optio cupiditate corrupti tempora voluptas magni, incidunt voluptates quo.</div>
             </div>
-            <div class="project">
-                <h2>НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ</h2>
-                <div class="projects__item">
-                    <img src="img/project.png" alt="">
-                    <p class="projects__item-title">Газпром Арена</p>
-                    <p class="projects__item-text">Мы сделали самую красивую арену в Европе. Это открытие стало для нас
-                        прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву.</p>
+        </div>
+        <div class="content">
+            <h2 class="title title-h2">Галерея</h2>
+            <div class="content__flex gallery__flex">
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone.png" alt="">
                 </div>
-                <div class="projects__item">
-                    <img src="img/project.png" alt="">
-                    <p class="projects__item-title">Газпром Арена</p>
-                    <p class="projects__item-text">Мы сделали самую красивую арену в Европе. Это открытие стало для нас
-                        прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву.</p>
-                </div>
-                <div class="projects__item">
-                    <img src="img/project.png" alt="">
-                    <p class="projects__item-title">Газпром Арена</p>
-                    <p class="projects__item-text">Мы сделали самую красивую арену в Европе. Это открытие стало для нас
-                        прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву.</p>
-                </div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (1).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (2).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (3).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (4).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (5).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (6).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (7).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (8).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (9).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (10).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (11).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (12).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (13).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (14).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (15).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (16).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (17).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (18).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (19).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (20).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (21).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (22).png"
+                        alt=""></div>
+                <div class="content__item content__item__img"><img class="gallery__img" src="img/duotone (23).png"
+                        alt=""></div>
             </div>
-        </section>
+        </div>
     </main>
-    <footer>
-
+    <footer id="contacts">
+        <div class="content">
+            <h2 class="title title-h2">Контакты</h2>
+            <address>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a class="menu__item-color" href="tel:01234567890">Позвонить</a></li>
+                        <li class="menu__item"><a class="menu__item-color" href="mailto:test@mail.ru">Написать</a></li>
+                    </ul>
+                </nav>
+            </address>
+        </div>
     </footer>
+
 </body>
 
 </html>
