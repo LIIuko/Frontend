@@ -90,10 +90,15 @@ h6 {
 
 /*--------------------*/
 
+body{
+    color: aliceblue;
+    background-color: #2b2c2f;
+}
+
 .title{
     font-size: 3rem;
     text-align: center;
-    padding: 30px 0 40px 0;
+    padding: 0 0 40px 0;
 }
 
 .title-h2{
@@ -101,8 +106,9 @@ h6 {
 }
 
 .container{
+    padding: 4%;
     max-width: 1200px;
-    background-color: beige;
+    background-color: #222831;
     margin: 0 auto;
 }
 
@@ -111,14 +117,40 @@ h6 {
 .menu {
     height: 5rem;
     padding: 1rem;
-    background-color: blueviolet;
+    background-color: rgb(115, 42, 184);
     border-radius: 10px;
     display: flex;
 }
 .logo__header {
+    justify-self: start;
+    align-self: center;
     flex: 1 1 20%;
 }
+.rainbow__logo{
+    width: 4rem;
+    display: block;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 100;
+}
 .logo {
+    width: 4rem;
+    border-radius: 50%;
+}
+.rainbow__logo::before{
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    border-radius: 50%;
 }
 .menu__burger{
     width: 100%;
@@ -160,40 +192,48 @@ h6 {
     transform: translateY(-0.5rem);
 }
 .menu__list {
+    align-items: center;
     display: flex;
+    z-index: 1000;
 }
 .menu__item {
     margin: 0 5px;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 100%;
     text-align: center;
-    background-color: chartreuse;
     align-self: center;
     padding: 1rem 2rem;
+}
+.menu__item__content{
+    width: 100%;
+    height: 100%;
+}
+
+.logo__notification{
+    width: 3rem;
 }
 .message {
     flex: 1 1 20%;
     position: relative;
 }
-.message__button{
-    text-align: end;
-    cursor: pointer;
-    padding: 1rem;
-}
 .message__button_img{
-    padding: 0 1rem;
+    margin-left: 1.5em;
+    width: 3rem;
 }
-#menu__message__toggle{
-    display: none;
+.notification{
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
 }
-.message__item{
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+/* TODO */
+.notification:hover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
 }
-#menu__message__toggle:checked ~.message__list .message__item{
+.notification:hover .message__list .message__item{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -203,22 +243,56 @@ h6 {
     border: 1px solid #333;
     padding: 1rem 2rem;
 }
-#menu__message__toggle:checked ~.message__list .message__item:hover{
-    font-size: 1.2rem;
-    padding: 1.5rem 0;
+.notification:hover .message__list .message__item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333;
+    padding: 1rem 2rem;
+}
+.notification:hover .message__list .message__item:hover{
+    animation: message-item 0.6s ease-out forwards;
+}
+.message__item{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 .message__list {
-    top: 4rem;
-    right: -1rem;
-    width: 100%;
-    position: absolute;
+    margin: 0 0 0 auto;
+    padding-top: 1rem;
+    width: 90%;
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .message__item{
-    background-color: blue;
+    background-color: rgb(115, 42, 184);
+}
+
+@keyframes message-item{
+    from{
+        font-size: 1rem;
+        padding: 1rem;
+        background-color: rgb(115, 42, 184);
+        font-weight: 400;
+        color: aliceblue;
+        transform: scaleX(0.9);
+    }
+    to{
+        font-size: 1.2rem;
+        padding: 1.2rem;
+        background-color: aliceblue;
+        font-weight: 700;
+        color: rgb(115, 42, 184);
+        transform: scaleX(1.1);
+    }
 }
 
 .footer__menu{
@@ -230,15 +304,86 @@ h6 {
     flex-wrap: wrap;
 }
 .gallery__item {
+    overflow: hidden;
+    position: relative;
     flex: 1 1 25%;
+    z-index: 1;
+}
+.gallery__description{
+    position: absolute;
+    padding: 2%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.gallery__item:hover .gallery__description{
+    opacity: 1;
+}
+.gallery__description:hover ~ .gallery__img{
+    transform: scale(1.5);
 }
 .gallery__img{
+    z-index: 1;
     width: 100%;
+    transition: all 5s ease;
+}
+.video__item{
+    overflow: visible;
+}
+.video__description{
+    padding: 7%;
+    justify-content: start;
+    flex-direction: column;
+    border-radius: 30px;
+    top: 25%;
+    left: -3%;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.button__menu{
+    padding: 1rem;
+    background-color: rgb(115, 42, 184);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.button__list{
+    padding: 1rem 0;
+    flex: 1 1 100%;
+}
+
+@media (max-width:1300px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .gallery__item {
+        flex: 1 1 50%;
+    }
 }
 
 @media (max-width:767px) {
     .container{
         max-width: none;
+    }
+    .gallery__item {
+        flex: 1 1 100%;
     }
     .burger__button{
         display: block;
@@ -267,7 +412,163 @@ h6 {
         display: flex;
         width: 100%;
         height: 100%;
-        border: 1px solid #333;
         padding: 1rem 0;
     }
+    #menu__burger__toggle:checked ~.menu__list__burger .flip__button_container{
+        padding: 0;
+        border-radius: 0;
+    }
 }
+
+/* Rainbow button */
+.rainbow__button{
+    display: block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: aliceblue;
+    background: #111;
+    position: relative;
+    z-index: 1;
+}
+.rainbow__button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.rainbow__button:active {
+    color: #000
+}
+.rainbow__button:active:after {
+    background: transparent;
+}
+
+.rainbow__button:hover:before {
+    opacity: 1;
+}
+
+.rainbow__button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/*  */
+
+/*Flip button*/
+.flip__button_container{
+    padding: 0;  
+}
+.flip__button{
+    opacity: 1;
+    outline: 0;
+    color: aliceblue;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.flip__button::after{
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    color: #111;
+    display: block;
+    transition: 0.5s;
+    position: absolute;
+    background: aliceblue;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+}
+
+.flip__button::before{
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: aliceblue;
+    display: block;
+    padding: 0 30px;
+    line-height: 40px;
+    transition: 0.5s;
+    position: relative;
+    background: #111;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+}
+
+.flip__button:hover::after{
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+}
+.flip__button:hover::before{
+    opacity: 0;
+    transform: translateY(50%) rotateX(90deg);
+}
+/*  */
+
+/*Glare bytton*/
+.glare__button {
+    background-color: #111;
+    color: aliceblue;
+    text-align: center;
+    cursor: pointer;
+    position:relative;
+    overflow:hidden;
+}
+  
+.glare__button:before {
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 50px;
+    background : #fff;
+    left: -55px;
+    top: -40px;
+    transform: rotate(37deg);
+    transition: all .3s;
+    opacity: 0.3;
+}
+
+.glare__button:hover:before {
+    left:95%;
+}
+/*  */
+
+/* Raise button */
+.raise__button{
+    color: aliceblue;
+    background-color: #111;
+}
+.raise__button:hover,
+.raise__button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+/*  */

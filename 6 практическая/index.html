@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -14,8 +15,10 @@
         <div class="container">
             <h1 class="title">Animation</h1>
             <div class="menu__header menu">
-                <div class="logo__header logo">
-                    Logo
+                <div class="logo__header">
+                    <div class="rainbow__logo">
+                        <img class="logo" src="img/logo.png" alt="">
+                    </div>
                 </div>
                 <div class="menu__burger">
                     <input type="checkbox" id="menu__burger__toggle">
@@ -23,39 +26,32 @@
                         <div class="burger__button_line"></div>
                     </label>
                     <ul class="menu__list menu__list__burger">
-                        <a class="menu__item burger__item" href="">
-                            <li>Lorem</li>
+                        <a class="menu__item burger__item rainbow__button" href="#">
+                            <li class="menu__item__content">Lorem</li>
                         </a>
-                        <a class="menu__item burger__item" href="">
-                            <li>Lorem</li>
+                        <a class="menu__item burger__item rainbow__button" href="#">
+                            <li class="menu__item__content">Lorem</li>
                         </a>
-                        <a class="menu__item burger__item" href="">
-                            <li>Lorem</li>
+                        <a class="menu__item burger__item rainbow__button" href="#">
+                            <li class="menu__item__content">Lorem</li>
                         </a>
-                        <a class="menu__item burger__item" href="">
-                            <li>Lorem</li>
+                        <a class="menu__item burger__item rainbow__button" href="#">
+                            <li class="menu__item__content">Lorem</li>
                         </a>
                     </ul>
                 </div>
                 <div class="message">
-                    <input type="checkbox" id="menu__message__toggle">
-                    <label class="message__button" for="menu__message__toggle">
-                        <div class="message__button_img">Button</div>
-                    </label>
-                    <ul class="message__list">
-                        <a class="message__item menu__item" href="">
-                            <li>Lorem 1</li>
-                        </a>
-                        <a class="message__item menu__item" href="">
-                            <li>Lorem 2</li>
-                        </a>
-                        <a class="message__item menu__item" href="">
-                            <li>Lorem 3</li>
-                        </a>
-                        <a class="message__item menu__item" href="">
-                            <li>Lorem 4</li>
-                        </a>
-                    </ul>
+                    <div class="notification">
+                        <div class="message__button_img rainbow__logo">
+                            <img class="logo__notification" src="img/notification.png" alt="">
+                        </div>
+                        <ul class="message__list">
+                            <li class="message__item menu__item">Lorem 1</li>
+                            <li class="message__item menu__item">Lorem 2</li>
+                            <li class="message__item menu__item">Lorem 3</li>
+                            <li class="message__item menu__item">Lorem 4</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,36 +61,76 @@
             <h2 class="title title-h2">Галерея</h2>
             <div class="gallery">
                 <div class="gallery__item">
+                    <div class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                        vero?</div>
                     <img class="gallery__img" src="img/foto1.jpg" alt="">
                 </div>
                 <div class="gallery__item">
+                    <div class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                        vero?</div>
                     <img class="gallery__img" src="img/foto2.png" alt="">
                 </div>
                 <div class="gallery__item">
+                    <div class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                        vero?</div>
                     <img class="gallery__img" src="img/foto3.jpg" alt="">
                 </div>
                 <div class="gallery__item">
+                    <div class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                        vero?</div>
                     <img class="gallery__img" src="img/foto4.jpg" alt="">
                 </div>
                 <div class="gallery__item">
+                    <div class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                        vero?</div>
                     <img class="gallery__img" src="img/foto5.jpg" alt="">
                 </div>
                 <div class="gallery__item">
+                    <div class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                        vero?</div>
                     <img class="gallery__img" src="img/foto6.jpg" alt="">
                 </div>
                 <div class="gallery__item">
+                    <div class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                        vero?</div>
                     <img class="gallery__img" src="img/foto7.jpg" alt="">
                 </div>
                 <div class="gallery__item">
+                    <div class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                        vero?</div>
                     <img class="gallery__img" src="img/foto8.jpg" alt="">
                 </div>
             </div>
         </div>
         <div class="container">
+            <h2 class="title title-h2">Кнопочки</h2>
+            <nav class="button__menu">
+                <ul class="menu__list button__list">
+                    <a class="menu__item glare__button" href="#">
+                        <li>Lorem</li>
+                    </a>
+                    <a class="menu__item glare__button" href="#">
+                        <li>Lorem</li>
+                    </a>
+                </ul>
+                <ul class="menu__list button__list">
+                    <a class="menu__item raise__button" href="#""><li>Lorem</li></a>
+                    <a class=" menu__item raise__button" href="#">
+                        <li>Lorem</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
             <h2 class="title title-h2">Видео</h2>
-            <iframe src="" frameborder="0">
-                
-            </iframe>
+            <div class="gallery__item video__item">
+                <div class="gallery__description video__description">
+                    <h2 class="title title-h2">Highlights</h2>
+                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+                <video src="videos/Y2mate.mx-「EDIT」Фотографирую закат - fem.love.mp4" width="100%" height="100%"
+                    type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' muted autoplay loop></video>
+            </div>
         </div>
     </main>
     <footer>
@@ -103,8 +139,12 @@
             <address>
                 <nav class="footer__menu menu">
                     <ul class="menu__list">
-                        <a class="menu__item" href="tel:01234567890"><li>Позвонить</li></a>
-                        <a class="menu__item" href="mailto:test@mail.ru"><li>Написать</li></a>
+                        <a class="menu__item flip__button_container" href="tel:01234567890">
+                            <li class="flip__button" data-back="Call" data-front="Позвонить"></li>
+                        </a>
+                        <a class="menu__item flip__button_container" href="mailto:test@mail.ru">
+                            <li class="flip__button" data-back="Write" data-front="Написать"></li>
+                        </a>
                     </ul>
                 </nav>
             </address>
