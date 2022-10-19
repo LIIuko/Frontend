@@ -448,6 +448,7 @@ body{
     border-radius: 10px;
 }
 .rainbow__button:active {
+    font-weight: 700;
     color: #000
 }
 .rainbow__button:active:after {
