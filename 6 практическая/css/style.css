@@ -444,7 +444,7 @@ body{
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
     opacity: 0;
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     border-radius: 10px;
 }
 .rainbow__button:active {
@@ -567,8 +567,7 @@ body{
     color: aliceblue;
     background-color: #111;
 }
-.raise__button:hover,
-.raise__button:focus {
+.raise__button:hover{
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   transform: translateY(-0.25em);
 }
