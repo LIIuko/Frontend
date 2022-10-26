@@ -278,6 +278,70 @@ body{
     align-self: center;
 }
 
+
+.container__cards-3{
+    position: relative;
+}
+/* .container__cards-3:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(32, 39, 49, 0.5);
+    filter: blur(5px);
+} */
+.card-3{
+    position: relative;
+    flex: 0 1 25%;
+    z-index: 15;
+    padding: 6rem 1rem;
+    border-radius: 0;
+    border: 0.2rem solid black;
+    filter: blur(0.5px);
+}
+.card-3:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(32, 39, 49, 0.7);
+    filter: blur(10px);
+}
+.card-3:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: calc(100%);
+    height: calc(100%);
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(93,51,142,1) 0%, rgba(93,51,142,1) 49.9%, rgba(43,15,75,1) 50.1%, rgba(43,15,75,1) 100%);
+}
+.card-3:hover{
+    filter: blur(0);
+}
+.card-3:hover:after{
+    z-index: -10;
+}
+
+/* .card-3:not(.card-3:hover){
+    z-index: 10;
+} */
+/* .card-3:hover{
+    z-index: 5;
+} */
+/* .card-3:not(.card-3:hover){
+    z-index: 3;
+    transition: all 0.5s;
+} */
+
+
 .form{
     position: relative;
     display: flex;
