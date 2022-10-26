@@ -229,12 +229,22 @@ body{
 }
 
 
+.container__cards:hover .card-2{
+    backdrop-filter: blur(10px);
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+.container__cards .card-2:hover{
+    filter: blur(0);
+    transform: scale(1.05);
+    opacity: 1;
+}
 .card-2 .card__title{
     margin: 2rem 0 6rem 0;
     font-size: 5rem;
 }
 .card-2{
-    flex: 0 1 30%;
+    flex: 0 1 25%;
     overflow: hidden;
     align-content: center;
     background-color: white;
