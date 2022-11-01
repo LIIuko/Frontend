@@ -1,0 +1,264 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header header header "
+    "aside  navigation navigation ads"
+    "aside main main ads"
+    "footer footer footer footer";
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 10fr 1fr;
+}
+.header,
+.navigation,
+.aside,
+.main,
+.ads,
+.footer{
+    padding: 10px;
+}
+
+.header {
+    background-color: aquamarine;
+    grid-area: header;
+}
+.navigation {
+    background-color: darkgreen;
+    grid-area: navigation;
+}
+.main {
+    background-color: cornflowerblue;
+    grid-area: main;
+}
+.aside {
+    background-color:blue;
+    grid-area: aside;
+}
+.ads {
+    background-color: blueviolet;
+    grid-area: ads;
+}
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: chartreuse;
+    grid-area: footer;
+}
+
+.title-h1 {
+    margin: 1.5rem 0;
+    font-size: 4rem;
+}
+.title-h2{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+.title-h3{
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+.title {
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-auto-flow: dense;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.gallery__img {
+    background-color: bisque;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.long_img {
+    background-color: blue;
+    grid-column: span 2;
+}
+.long_long_img{
+    background-color: blue;
+    grid-column: span 3;
+}
+.height_img {
+    background-color: blueviolet;
+    grid-row: span 2;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.form__text {
+
+}
+.form__long_text {
+    grid-column: span 2;
+}
+
+
+.footer__img__container {
+    display: flex;
+    justify-content: space-around;
+}
+.footer__img {
+}
+
+@media (max-width:992px) {
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header header header"
+        "navigation navigation navigation"
+        "aside main main"
+        "ads footer footer";
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: 1fr 1fr 10fr 1fr;
+    }
+
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .long_long_img{
+        grid-column: span 3
+    }
+}
+
+@media (max-width:767px) {
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "navigation"
+        "main"
+        "aside"
+        "ads"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 10fr 1fr 1fr 1fr;
+    }
+
+    .footer{
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: none;
+    }
+
+    .long_long_img{
+        grid-column: span 1
+    }
+    .long_img{
+        grid-column: span 1
+    }
+    .height_img {
+        grid-row: span 1;
+    }
+
+    .form{
+        grid-template-columns: 1fr;
+    }
+    .form__long_text {
+        grid-column: span 1;
+    }
+}
