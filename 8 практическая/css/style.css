@@ -214,14 +214,14 @@ img{
     outline: none;
     border: none;
     background-color: #092e37;
-    transform: translateY(1.25rem);
-    height: 0.5rem;
+    transform-origin: bottom;
+    transform: rotateX(80deg);
+    padding: 0.5rem 1rem;
     transition: all 1s;
 }
 .form__text:focus {
-    transform: translateY(0);
-    padding: 0.5rem 1rem;
-    height: 2em;
+    transform: rotateX(0);
+    transform-origin: bottom;
     background-color: #27cdf5;
     transition: all 1s;
 }
