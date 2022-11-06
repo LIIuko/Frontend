@@ -1,0 +1,15 @@
+.red__button{
+    border-radius: 0.4rem;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 1rem 2rem;
+    background-color: blue;
+}
+
+.create__buttons{
+    border-radius: 0.4rem;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 1rem 2rem;
+    background-color: blue;
+}
