@@ -1,0 +1,186 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+body{
+    background-color: cornflowerblue;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: darkcyan;
+}
+
+.title{
+    text-align: center;
+    padding: 1rem 0;
+}
+.title_h1{
+    font-size: 5rem;
+}
+.title_h2{
+    font-size: 3rem;
+}
+.list li{
+    padding: 0.5rem;
+    font-size: 2rem;
+    position: relative;
+    margin-left: 3rem;
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 1rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.notification{
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    font-size: 2rem;
+    color: red;
+    background-color: blue;
+    padding: 1rem;
+}
+
+.text__notification{
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+}
+
+.send__notification,
+.change{
+    padding: 1rem;
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.coortdinate{
+    padding: 1rem;
+    background-color: chocolate;
+    font-size: 2rem;
+}
+
+.img_n{
+    width: 100%;
+}
+.notification_{
+    min-width: 15rem;
+    height: 4rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.img__notification {
+    cursor: pointer;
+    align-self: end;
+    width: 4rem;
+}
+.text__notification_ {
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    opacity: 0;
+}
+.active{
+    opacity: 1;
+}
+.text__notification_ li{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: bisque;
+}
