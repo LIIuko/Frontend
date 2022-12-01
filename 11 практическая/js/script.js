@@ -1,5 +1,4 @@
 'use strict'
-
 //task 1
 let array = [];
 
@@ -47,7 +46,6 @@ replaceButton.addEventListener("click", event => {
     let tmp = array[index];
     array[index] = array[el];
     array[el] = tmp;
-    // array.splice(index, 1, array[el]);
     for (let el of array){
         let block = document.createElement("div");
         block.classList.add("card");
@@ -61,9 +59,9 @@ replaceButton.addEventListener("click", event => {
 
 //task 2
 let array2 = [1, 2, 3, 2, 5, 3, 6, 1, 9, 4];
-// console.log(array2);
+console.log(array2);
 let newArray = array2.filter(item => (item >= 2 && item <= 5));
-// console.log(newArray);
+console.log(newArray);
 
 //task 3
 const sortButton = document.querySelector(".sort__button");

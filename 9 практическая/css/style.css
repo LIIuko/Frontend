@@ -12,6 +12,7 @@
 }
 
 .container__create{
+    border: 2px solid black;
     width: 100%;
     height: 400px;
     position: relative;

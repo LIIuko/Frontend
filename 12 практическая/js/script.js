@@ -1,7 +1,14 @@
+let links = document.querySelectorAll(".link");
+for(let el of links){
+    if(!el.getAttribute('href')) continue;
+    if (!el.getAttribute('href').includes("://")) continue;
+    el.style.color = "red";
+}
+
 //task 1
 const list = document.querySelector(".list");
 let text = prompt("Ввелите содержимое элемента списка");
-while(text){
+while (text) {
     let el = document.createElement("li");
     el.textContent = text;
     list.append(el);
@@ -12,7 +19,7 @@ while(text){
 const header = document.querySelector(".header");
 const textNotification = document.querySelector(".text__notification");
 const sendNotification = document.querySelector(".send__notification");
-function showNotification(options){
+function showNotification(options) {
     let div = document.createElement("div");
     div.classList.add("notification");
     div.textContent = options;
@@ -23,7 +30,7 @@ function showNotification(options){
 }
 sendNotification.addEventListener("click", event => {
     let text = textNotification.value;
-    if(text){
+    if (text) {
         showNotification(text);
     }
 })
@@ -32,18 +39,11 @@ sendNotification.addEventListener("click", event => {
 const border = document.querySelector(".border");
 const img = document.querySelector(".img");
 const change = document.querySelector(".change");
-img.style.width = 100 + "%";
-border.style.width = 400 + "px";
+img.style.width = 400 + "px";
 border.style.margin = '0 auto';
 change.addEventListener("click", event => {
-    console.log(border.style.width);
-    if(border.style.width == "400px"){
-        border.style.width = 800 + "px";
-        img.src = "img/mikasa.jpg";
-    }else{
-        border.style.width = 400 + "px";
-        img.src = "img/angel.jpg";
-    }
+    img.style.left = Math.round(border.clientWidth / 2 - img.offsetWidth / 2) + "px";
+    img.style.top = Math.round(border.clientHeight / 2 - img.offsetHeight / 2) + "px";
 });
 const coordinate = document.querySelector(".coortdinate");
 img.addEventListener("click", event => {
@@ -52,13 +52,9 @@ img.addEventListener("click", event => {
 
 
 //task 5
-const listNotification = document.querySelector(".text__notification_");
+let panes = document.querySelectorAll('.pane');
 
-document.body.addEventListener("click", event=> {
-    if(listNotification.classList.contains("active")){
-        listNotification.classList.remove("active");
-    }
-    else if(event.target.classList.contains("img_n")){
-        listNotification.classList.add("active");
-    }
-});
+for (let pane of panes) {
+    pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>');
+    pane.firstChild.onclick = () => pane.remove();
+}
