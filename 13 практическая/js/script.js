@@ -87,3 +87,44 @@ thumb.onmousedown = function (event) {
 thumb.ondragstart = function () {
     return false;
 };
+
+
+
+function allowDragAndDrop(elem) {
+    elem.preventDefault();
+}
+function drag(elem) {
+    elem.dataTransfer.setData("text", elem.target.id);
+}
+function drop(elem) {
+
+    elem.preventDefault();
+
+    var data = elem.dataTransfer.getData("text");
+
+    var box = document.querySelector("#myFigure");
+    var ronaldo = document.querySelector("#myImage");
+    var ronaldo2 = document.querySelector("#myImage2");
+    var ronaldo3 = document.querySelector("#myImage3");
+    var ronaldo4 = document.querySelector("#myImage4");
+    var ronaldo5 = document.querySelector("#myImage5");
+
+    var all_cost = Number(box.getAttribute('all_cost'));
+    console.log(all_cost);
+    var cost = Number(ronaldo.getAttribute('cost'));
+    var cost2 = Number(ronaldo2.getAttribute('cost'));
+    var cost3 = Number(ronaldo3.getAttribute('cost'));
+    var cost4 = Number(ronaldo4.getAttribute('cost'));
+    var cost5 = Number(ronaldo5.getAttribute('cost'));
+    console.log(cost);
+    all_cost += cost;
+    all_cost += cost2;
+    all_cost += cost3;
+    all_cost += cost4;
+    all_cost += cost5;
+
+    console.log(all_cost);
+
+    elem.target.appendChild(document.getElementById(data));
+
+}
