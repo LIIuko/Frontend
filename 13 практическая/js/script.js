@@ -57,7 +57,6 @@ thumb.onmousedown = function (event) {
     event.preventDefault(); // предотвратить запуск выделения (действие браузера)
 
     let shiftX = event.clientX - thumb.getBoundingClientRect().left;
-    // shiftY здесь не нужен, слайдер двигается только по горизонтали
 
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
@@ -81,7 +80,6 @@ thumb.onmousedown = function (event) {
         document.removeEventListener('mouseup', onMouseUp);
         document.removeEventListener('mousemove', onMouseMove);
     }
-
 };
 
 thumb.ondragstart = function () {
@@ -89,7 +87,7 @@ thumb.ondragstart = function () {
 };
 
 
-
+//task 5
 function allowDragAndDrop(elem) {
     elem.preventDefault();
 }
@@ -97,34 +95,55 @@ function drag(elem) {
     elem.dataTransfer.setData("text", elem.target.id);
 }
 function drop(elem) {
-
     elem.preventDefault();
 
     var data = elem.dataTransfer.getData("text");
-
     var box = document.querySelector("#myFigure");
-    var ronaldo = document.querySelector("#myImage");
-    var ronaldo2 = document.querySelector("#myImage2");
-    var ronaldo3 = document.querySelector("#myImage3");
-    var ronaldo4 = document.querySelector("#myImage4");
-    var ronaldo5 = document.querySelector("#myImage5");
-
     var all_cost = Number(box.getAttribute('all_cost'));
-    console.log(all_cost);
-    var cost = Number(ronaldo.getAttribute('cost'));
-    var cost2 = Number(ronaldo2.getAttribute('cost'));
-    var cost3 = Number(ronaldo3.getAttribute('cost'));
-    var cost4 = Number(ronaldo4.getAttribute('cost'));
-    var cost5 = Number(ronaldo5.getAttribute('cost'));
-    console.log(cost);
-    all_cost += cost;
-    all_cost += cost2;
-    all_cost += cost3;
-    all_cost += cost4;
-    all_cost += cost5;
-
-    console.log(all_cost);
 
     elem.target.appendChild(document.getElementById(data));
+
+    for (let elem of box.children) {
+        all_cost += Number(elem.getAttribute('cost'));
+    }
+
+    console.log(all_cost);
+}
+
+
+const animItems = document.querySelectorAll('._anim_items');
+
+if (animItems.length > 0){
+    window.addEventListener('scroll',animOnScroll);
+    function animOnScroll(){
+        for (let index = 0; index < animItems.length; index++){
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            
+            if (animItemHeight > window.innerHeight){
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
+                animItem.classList.add('_active');
+            }
+            else{
+                animItem.classList.remove('_active');
+            }
+        }
+    }
+    function offset(el){
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left:rect.left + scrollLeft}
+    }
+    setTimeout(() =>{
+        animOnScroll();
+    }, 300);
 
 }
